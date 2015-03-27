@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from base import Page
 from locators import *
-import users, functions
+import users
 from selenium.webdriver.support.ui import WebDriverWait
 
 
