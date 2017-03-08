@@ -20,23 +20,23 @@ class MainPage(Page):
         
     def click_sign_up_button(self):
         self.hover(*MainPageLocatars.ACCOUNT)
-        self.driver.find_element(*MainPageLocatars.SIGNUP).click()
+        self.find_element(*MainPageLocatars.SIGNUP).click()
         return SignUpPage(self.driver)
 
     def click_sign_in_button(self):
         self.hover(*MainPageLocatars.ACCOUNT)
-        self.driver.find_element(*MainPageLocatars.LOGIN).click()
+        self.find_element(*MainPageLocatars.LOGIN).click()
         return LoginPage(self.driver)
 
 class LoginPage(Page):
     def enter_email(self, user):
-        self.driver.find_element(*LoginPageLocatars.EMAIL).send_keys(users.get_user(user)["email"])
+        self.find_element(*LoginPageLocatars.EMAIL).send_keys(users.get_user(user)["email"])
 
     def enter_password(self, user):
-        self.driver.find_element(*LoginPageLocatars.PASSWORD).send_keys(users.get_user(user)["password"])
+        self.find_element(*LoginPageLocatars.PASSWORD).send_keys(users.get_user(user)["password"])
 
     def click_login_button(self):
-        self.driver.find_element(*LoginPageLocatars.SUBMIT).click()
+        self.find_element(*LoginPageLocatars.SUBMIT).click()
 
     def login(self, user):
         self.enter_email(user)
