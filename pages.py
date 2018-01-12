@@ -12,7 +12,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 class MainPage(Page):
     def __init__(self, driver):
         self.locator = MainPageLocatars
-        super(MainPage, self).__init__(driver)
+        super().__init__(driver)  # Python3 version
 
     def check_page_loaded(self):
         return True if self.find_element(*self.locator.LOGO) else False
@@ -35,7 +35,7 @@ class MainPage(Page):
 class LoginPage(Page):
     def __init__(self, driver):
         self.locator = LoginPageLocatars
-        super(LoginPage, self).__init__(driver)
+        super(LoginPage, self).__init__(driver)  # Python2 version
 
     def enter_email(self, user):
         self.find_element(*self.locator.EMAIL).send_keys(users.get_user(user)["email"])
