@@ -29,7 +29,7 @@ class MainPage(Page):
 
 When you want to write tests, you should derive your test class from `BaseTest` which holds basic functionality for your tests. Then you can call  page and related methods in accordance with the steps in the test cases
 ```python
-class TestSignInPage(unittest.TestCase):
+class TestSignInPage(BaseTest):
 
     def test_sign_in_with_valid_user(self):
         print("\n" + str(test_cases(4)))
