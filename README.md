@@ -2,13 +2,55 @@
 
 Page-object model is a pattern that you can apply it to develop efficient automation framework. With page-model, it is possible to minimise maintenance cost. Basically page-object means that your every page is inherited from a base class which includes basic functionalities for every pages. If you have some new functionality that every pages have, you can simple add it to the base class.
 
-#### If you want to run it, you should type: 
+Base class include basic functionality and driver initialization
+```python
+# base.py
+class Page(object):
+    def __init__(self, driver, base_url='http://www.amazon.com/'):
+        self.base_url = base_url
+        self.driver = driver
+        self.timeout = 30
+
+    def find_element(self, *locator):
+        return self.driver.find_element(*locator)
+```
+
+MainPage is derived from the Base class, it contains methods related to this page, which will be used to create test steps.
+```python
+# main_page.py
+class MainPage(Page):
+    def __init__(self, driver):
+        self.locator = MainPageLocators
+        super().__init__(driver)  # Python3 version
+
+    def check_page_loaded(self):
+        return True if self.find_element(*self.locator.LOGO) else False
+```
+
+When you want to write tests, you should derive your test class from `BaseTest` which holds basic functionality for your tests. Then you can call  page and related methods in accordance with the steps in the test cases
+```python
+class TestSignInPage(unittest.TestCase):
+
+    def test_sign_in_with_valid_user(self):
+        print("\n" + str(test_cases(4)))
+        main_page = MainPage(self.driver)
+        login_page = main_page.click_sign_in_button()
+        result = login_page.login_with_valid_user("valid_usrer")
+        self.assertIn("yourstore/home", result.get_url())
+```
+
+#### If you want to run all tests, you should type: 
 ```sh
-python <module-name.py> 
+python -m unittest 
 ```
 
 
-#### If you want to run it just a class, you should type: 
+#### If you want to run just a class, you should type: 
 ```sh
-python <module-name.py> <class-name> 
+python -m unittest tests.test_sign_in_page.TestSignInPage
+```
+
+#### If you want to run just a test method, you should type: 
+```sh
+python -m unittest tests.test_sign_in_page.TestSignInPage.test_page_load
 ```
