@@ -27,4 +27,5 @@ class BaseTest(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    BaseTest.__new__()
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestPages)
+    unittest.TextTestRunner(verbosity=1).run(suite)

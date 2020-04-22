@@ -1,12 +1,12 @@
 from selenium.webdriver.common.keys import Keys
-from pages.base import Page
+from pages.base_page import BasePage
 from utils.locators import *
 
 
 # Page objects are written in this module.
 # Depends on the page functionality we can have more functions for new classes
 
-class MainPage(Page):
+class MainBasePage(BasePage):
     def __init__(self, driver):
         self.locator = MainPageLocators
         super().__init__(driver)  # Python3 version

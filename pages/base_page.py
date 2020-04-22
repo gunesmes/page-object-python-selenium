@@ -2,7 +2,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 
 # this Base class is serving basic attributes for every single page inherited from Page class
-class Page(object):
+class BasePage(object):
     def __init__(self, driver, base_url='http://www.amazon.com/'):
         self.base_url = base_url
         self.driver = driver

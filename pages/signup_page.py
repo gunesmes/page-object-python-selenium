@@ -1,5 +1,5 @@
-from pages.base import Page
+from pages.base_page import BasePage
 
 
-class SignUpPage(Page):
+class SignUpBasePage(BasePage):
     pass

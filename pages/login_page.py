@@ -1,12 +1,12 @@
 from utils.locators import *
-from pages.base import Page
+from pages.base_page import BasePage
 from utils import users
 
 
-class LoginPage(Page):
+class LoginBasePage(BasePage):
     def __init__(self, driver):
         self.locator = LoginPageLocators
-        super(LoginPage, self).__init__(driver)  # Python2 version
+        super(LoginBasePage, self).__init__(driver)  # Python2 version
 
     def enter_email(self, email):
         self.find_element(*self.locator.EMAIL).send_keys(email)
