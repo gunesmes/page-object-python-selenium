@@ -1,3 +1,7 @@
+"[page-object-python-selenium] is being sponsored by the following tool; please help to support us by taking a look and signing up to a free trial"
+<!--<a href="https://tracking.gitads.io/?repo=page-object-python-selenium"> <img src="https://images.gitads.io/page-object-python-selenium" alt="GitAds"/> </a>-->
+
+
 # Selenium Page Object Model with Python 
 
 Page-object-model (POM) is a pattern that you can apply it to develop efficient automation framework. With page-model, it is possible to minimise maintenance cost. Basically page-object means that your every page is inherited from a base class which includes basic functionalities for every pages. If you have some new functionality that every pages have, you can simple add it to the base class.
