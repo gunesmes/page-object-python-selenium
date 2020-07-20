@@ -1,5 +1,6 @@
-"[page-object-python-selenium] is being sponsored by the following tool; please help to support us by taking a look and signing up to a free trial"
-<!--<a href="https://tracking.gitads.io/?repo=page-object-python-selenium"> <img src="https://images.gitads.io/page-object-python-selenium" alt="GitAds"/> </a>-->
+[page-object-python-selenium] is being sponsored by the following tool; please help to support us by taking a look and signing up to a free trial
+
+<a href="https://tracking.gitads.io/?repo=page-object-python-selenium"> <img src="https://images.gitads.io/page-object-python-selenium" alt="GitAds"/> </a>
 
 
 # Selenium Page Object Model with Python 
