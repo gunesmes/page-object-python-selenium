@@ -1,12 +1,14 @@
 from selenium.webdriver.common.keys import Keys
 from pages.base_page import BasePage
+from pages.login_page import LoginPage
+from pages.signup_page import SignUpBasePage
 from utils.locators import *
 
 
 # Page objects are written in this module.
 # Depends on the page functionality we can have more functions for new classes
 
-class MainBasePage(BasePage):
+class MainPage(BasePage):
     def __init__(self, driver):
         self.locator = MainPageLocators
         super().__init__(driver)  # Python3 version
@@ -21,7 +23,7 @@ class MainBasePage(BasePage):
 
     def click_sign_up_button(self):
         self.find_element(*self.locator.SIGNUP).click()
-        return SignUpPage(self.driver)
+        return SignUpBasePage(self.driver)
 
     def click_sign_in_button(self):
         self.find_element(*self.locator.LOGIN).click()

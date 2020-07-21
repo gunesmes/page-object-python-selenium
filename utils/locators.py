@@ -9,7 +9,7 @@ class MainPageLocators(object):
     SIGNUP = (By.CSS_SELECTOR, '#nav-signin-tooltip > div > a')
     LOGIN = (By.CSS_SELECTOR, '#nav-signin-tooltip > a')
     SEARCH = (By.ID, 'twotabsearchtextbox')
-    SEARCH_LIST = (By.CLASS_NAME, 's-result-list')
+    SEARCH_LIST = (By.CSS_SELECTOR, 'div[data-component-type="s-search-result"]')
 
 
 class LoginPageLocators(object):
