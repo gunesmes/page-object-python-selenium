@@ -1,5 +1,3 @@
-[page-object-python-selenium] is being sponsored by the following tool; please help to support us by taking a look and signing up to a free trial
-
 
 # Selenium Page Object Model with Python 
 
