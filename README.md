@@ -5,7 +5,7 @@ Page-object-model (POM) is a pattern that you can apply it to develop efficient 
 
 `BasePage` class include basic functionality and driver initialization
 ```python
-base_page.py
+# base_page.py
 class BasePage(object):
     def __init__(self, driver, base_url='http://www.amazon.com/'):
         self.base_url = base_url
@@ -30,8 +30,8 @@ class MainPage(BasePage):
 
 When you want to write tests, you should derive your test class from `BaseTest` which holds basic functionality for your tests. Then you can call  page and related methods in accordance with the steps in the test cases
 ```python
+# test_sign_in_page.py
 class TestSignInPage(BaseTest):
-
     def test_sign_in_with_valid_user(self):
         print("\n" + str(test_cases(4)))
         main_page = MainPage(self.driver)
