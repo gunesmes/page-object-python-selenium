@@ -1,0 +1,134 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><title>Extent Style Report</title>
+<style>body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#121212;color:#e0e0e0}header{padding:1rem 2rem;background:#1e1e1e;display:flex;justify-content:space-between;align-items:center}h1{margin:0;font-size:1.2rem}.badges span{display:inline-block;margin-right:.5rem;padding:.35rem .6rem;border-radius:.6rem;font-size:.7rem;font-weight:600}.PASS{background:#2e7d32;color:#fff}.FAIL{background:#c62828;color:#fff}.ERROR{background:#ad1457;color:#fff}.SKIP{background:#f9a825;color:#222}main{padding:1.25rem}table{width:100%;border-collapse:collapse;margin-top:1rem;font-size:.75rem}th,td{border:1px solid #2d2d2d;padding:.45rem;vertical-align:top}th{background:#222}tr.row:hover{background:#1d1d1d}details summary{cursor:pointer;color:#64b5f6}.summary-grid{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1rem}.card{flex:1 1 160px;background:#1e1e1e;padding:1rem;border:1px solid #2a2a2a;border-radius:8px}.bar{height:10px;border-radius:5px;background:linear-gradient(90deg,#2e7d32 66.67%,#ad1457 33.33%);margin-top:.5rem}.status{padding:.2rem .45rem;border-radius:.5rem;font-size:.6rem;font-weight:600}</style>
+</head><body>
+<header><h1>Extent Style Selenium Report</h1><div class='badges'><span class='PASS'>PASS 4</span><span class='FAIL'>FAIL 0</span><span class='ERROR'>ERROR 2</span><span class='SKIP'>SKIP 0</span><span>Total 6</span></div></header>
+<main>
+<section class='summary-grid'>
+  <div class='card'>Start<br><strong>2025-08-20 13:52:47</strong></div>
+  <div class='card'>Duration<br><strong>196.78s</strong></div>
+  <div class='card'>Pass Rate<br><strong>66.7%</strong><div class='bar'></div></div>
+</section>
+<h2>Tests</h2>
+<table><thead><tr><th>Status</th><th>Class</th><th>Name</th><th>Duration</th><th>Message</th><th>Traceback</th></tr></thead><tbody><tr class='row PASS'><td><span class='status PASS'>PASS</span></td><td>test_sign_in_page.TestSignInPage</td><td>test_page_load</td><td>8469 ms</td><td></td><td></td></tr><tr class='row PASS'><td><span class='status PASS'>PASS</span></td><td>test_sign_in_page.TestSignInPage</td><td>test_search_item</td><td>8805 ms</td><td></td><td></td></tr><tr class='row PASS'><td><span class='status PASS'>PASS</span></td><td>test_sign_in_page.TestSignInPage</td><td>test_sign_in_button</td><td>9672 ms</td><td></td><td></td></tr><tr class='row ERROR'><td><span class='status ERROR'>ERROR</span></td><td>test_sign_in_page.TestSignInPage</td><td>test_sign_in_with_in_valid_user</td><td>66183 ms</td><td>Message: 
+Stacktrace:
+0   chromedriver                        0x00000001050fcc20 cxxbridge1$str$ptr + 2747652
+1   chromedriver                        0x00000001050f4b20 cxxbridge1$str$ptr + 2714628
+2   chromedriver                        0x0000000104c3d0c8 cxxbridge1$string$len + 90536
+3   chromedriver                        0x0000000104c84618 cxxbridge1$string$len + 382712
+4   chromedriver                        0x0000000104cc599c cxxbridge1$string$len + 649852
+5   chromedriver                        0x0000000104c78934 cxxbridge1$string$len + 334356
+6   chromedriver                        0x00000001050bf88c cxxbridge1$str$ptr + 2496880
+7   chromedriver                        0x00000001050c2ab8 cxxbridge1$str$ptr + 2509724
+8   chromedriver                        0x00000001050a0510 cxxbridge1$str$ptr + 2369012
+9   chromedriver                        0x00000001050c3360 cxxbridge1$str$ptr + 2511940
+10  chromedriver                        0x0000000105091610 cxxbridge1$str$ptr + 2307828
+11  chromedriver                        0x00000001050e3230 cxxbridge1$str$ptr + 2642708
+12  chromedriver                        0x00000001050e33bc cxxbridge1$str$ptr + 2643104
+13  chromedriver                        0x00000001050f476c cxxbridge1$str$ptr + 2713680
+14  libsystem_pthread.dylib             0x00000001819bfc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001819bab80 thread_start + 8
+</td><td><details><summary>Trace</summary><pre>Traceback (most recent call last):
+  File &quot;/Users/mesutgunes/.pyenv/versions/3.11.0rc2/lib/python3.11/unittest/case.py&quot;, line 57, in testPartExecutor
+    yield
+  File &quot;/Users/mesutgunes/.pyenv/versions/3.11.0rc2/lib/python3.11/unittest/case.py&quot;, line 623, in run
+    self._callTestMethod(testMethod)
+  File &quot;/Users/mesutgunes/.pyenv/versions/3.11.0rc2/lib/python3.11/unittest/case.py&quot;, line 579, in _callTestMethod
+    if method() is not None:
+       ^^^^^^^^
+  File &quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/tests/test_sign_in_page.py&quot;, line 47, in test_sign_in_with_in_valid_user
+    result = login_page.login_with_in_valid_user(&quot;invalid_user&quot;)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/pages/login_page.py&quot;, line 54, in login_with_in_valid_user
+    self.login(user)
+  File &quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/pages/login_page.py&quot;, line 45, in login
+    self.enter_email(user[&quot;email&quot;])
+  File &quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/pages/login_page.py&quot;, line 13, in enter_email
+    field = self.wait_and_find(*self.locator.EMAIL)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/pages/base_page.py&quot;, line 20, in wait_and_find
+    WebDriverWait(self.driver, to).until(EC.presence_of_element_located(locator))
+  File &quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/.venv/lib/python3.11/site-packages/selenium/webdriver/support/wait.py&quot;, line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+0   chromedriver                        0x00000001050fcc20 cxxbridge1$str$ptr + 2747652
+1   chromedriver                        0x00000001050f4b20 cxxbridge1$str$ptr + 2714628
+2   chromedriver                        0x0000000104c3d0c8 cxxbridge1$string$len + 90536
+3   chromedriver                        0x0000000104c84618 cxxbridge1$string$len + 382712
+4   chromedriver                        0x0000000104cc599c cxxbridge1$string$len + 649852
+5   chromedriver                        0x0000000104c78934 cxxbridge1$string$len + 334356
+6   chromedriver                        0x00000001050bf88c cxxbridge1$str$ptr + 2496880
+7   chromedriver                        0x00000001050c2ab8 cxxbridge1$str$ptr + 2509724
+8   chromedriver                        0x00000001050a0510 cxxbridge1$str$ptr + 2369012
+9   chromedriver                        0x00000001050c3360 cxxbridge1$str$ptr + 2511940
+10  chromedriver                        0x0000000105091610 cxxbridge1$str$ptr + 2307828
+11  chromedriver                        0x00000001050e3230 cxxbridge1$str$ptr + 2642708
+12  chromedriver                        0x00000001050e33bc cxxbridge1$str$ptr + 2643104
+13  chromedriver                        0x00000001050f476c cxxbridge1$str$ptr + 2713680
+14  libsystem_pthread.dylib             0x00000001819bfc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001819bab80 thread_start + 8
+
+</pre></details></td></tr><tr class='row ERROR'><td><span class='status ERROR'>ERROR</span></td><td>test_sign_in_page.TestSignInPage</td><td>test_sign_in_with_valid_user</td><td>67169 ms</td><td>Message: 
+Stacktrace:
+0   chromedriver                        0x0000000102d58c20 cxxbridge1$str$ptr + 2747652
+1   chromedriver                        0x0000000102d50b20 cxxbridge1$str$ptr + 2714628
+2   chromedriver                        0x00000001028990c8 cxxbridge1$string$len + 90536
+3   chromedriver                        0x00000001028e0618 cxxbridge1$string$len + 382712
+4   chromedriver                        0x000000010292199c cxxbridge1$string$len + 649852
+5   chromedriver                        0x00000001028d4934 cxxbridge1$string$len + 334356
+6   chromedriver                        0x0000000102d1b88c cxxbridge1$str$ptr + 2496880
+7   chromedriver                        0x0000000102d1eab8 cxxbridge1$str$ptr + 2509724
+8   chromedriver                        0x0000000102cfc510 cxxbridge1$str$ptr + 2369012
+9   chromedriver                        0x0000000102d1f360 cxxbridge1$str$ptr + 2511940
+10  chromedriver                        0x0000000102ced610 cxxbridge1$str$ptr + 2307828
+11  chromedriver                        0x0000000102d3f230 cxxbridge1$str$ptr + 2642708
+12  chromedriver                        0x0000000102d3f3bc cxxbridge1$str$ptr + 2643104
+13  chromedriver                        0x0000000102d5076c cxxbridge1$str$ptr + 2713680
+14  libsystem_pthread.dylib             0x00000001819bfc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001819bab80 thread_start + 8
+</td><td><details><summary>Trace</summary><pre>Traceback (most recent call last):
+  File &quot;/Users/mesutgunes/.pyenv/versions/3.11.0rc2/lib/python3.11/unittest/case.py&quot;, line 57, in testPartExecutor
+    yield
+  File &quot;/Users/mesutgunes/.pyenv/versions/3.11.0rc2/lib/python3.11/unittest/case.py&quot;, line 623, in run
+    self._callTestMethod(testMethod)
+  File &quot;/Users/mesutgunes/.pyenv/versions/3.11.0rc2/lib/python3.11/unittest/case.py&quot;, line 579, in _callTestMethod
+    if method() is not None:
+       ^^^^^^^^
+  File &quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/tests/test_sign_in_page.py&quot;, line 40, in test_sign_in_with_valid_user
+    result = login_page.login_with_valid_user(&quot;valid_user&quot;)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/pages/login_page.py&quot;, line 50, in login_with_valid_user
+    self.login(user)
+  File &quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/pages/login_page.py&quot;, line 45, in login
+    self.enter_email(user[&quot;email&quot;])
+  File &quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/pages/login_page.py&quot;, line 13, in enter_email
+    field = self.wait_and_find(*self.locator.EMAIL)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/pages/base_page.py&quot;, line 20, in wait_and_find
+    WebDriverWait(self.driver, to).until(EC.presence_of_element_located(locator))
+  File &quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/.venv/lib/python3.11/site-packages/selenium/webdriver/support/wait.py&quot;, line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000102d58c20 cxxbridge1$str$ptr + 2747652
+1   chromedriver                        0x0000000102d50b20 cxxbridge1$str$ptr + 2714628
+2   chromedriver                        0x00000001028990c8 cxxbridge1$string$len + 90536
+3   chromedriver                        0x00000001028e0618 cxxbridge1$string$len + 382712
+4   chromedriver                        0x000000010292199c cxxbridge1$string$len + 649852
+5   chromedriver                        0x00000001028d4934 cxxbridge1$string$len + 334356
+6   chromedriver                        0x0000000102d1b88c cxxbridge1$str$ptr + 2496880
+7   chromedriver                        0x0000000102d1eab8 cxxbridge1$str$ptr + 2509724
+8   chromedriver                        0x0000000102cfc510 cxxbridge1$str$ptr + 2369012
+9   chromedriver                        0x0000000102d1f360 cxxbridge1$str$ptr + 2511940
+10  chromedriver                        0x0000000102ced610 cxxbridge1$str$ptr + 2307828
+11  chromedriver                        0x0000000102d3f230 cxxbridge1$str$ptr + 2642708
+12  chromedriver                        0x0000000102d3f3bc cxxbridge1$str$ptr + 2643104
+13  chromedriver                        0x0000000102d5076c cxxbridge1$str$ptr + 2713680
+14  libsystem_pthread.dylib             0x00000001819bfc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001819bab80 thread_start + 8
+
+</pre></details></td></tr><tr class='row PASS'><td><span class='status PASS'>PASS</span></td><td>test_sign_in_page.TestSignInPage</td><td>test_sign_up_button</td><td>36245 ms</td><td></td><td></td></tr></tbody></table>
+<h2>Raw Data (JSON)</h2><pre>[{&quot;name&quot;: &quot;test_page_load&quot;, &quot;class_name&quot;: &quot;test_sign_in_page.TestSignInPage&quot;, &quot;status&quot;: &quot;PASS&quot;, &quot;start&quot;: 1755687167.4689658, &quot;stop&quot;: 1755687175.938129, &quot;duration_ms&quot;: 8469, &quot;message&quot;: null, &quot;traceback&quot;: null}, {&quot;name&quot;: &quot;test_search_item&quot;, &quot;class_name&quot;: &quot;test_sign_in_page.TestSignInPage&quot;, &quot;status&quot;: &quot;PASS&quot;, &quot;start&quot;: 1755687175.938207, &quot;stop&quot;: 1755687184.743506, &quot;duration_ms&quot;: 8805, &quot;message&quot;: null, &quot;traceback&quot;: null}, {&quot;name&quot;: &quot;test_sign_in_button&quot;, &quot;class_name&quot;: &quot;test_sign_in_page.TestSignInPage&quot;, &quot;status&quot;: &quot;PASS&quot;, &quot;start&quot;: 1755687184.743597, &quot;stop&quot;: 1755687194.416537, &quot;duration_ms&quot;: 9672, &quot;message&quot;: null, &quot;traceback&quot;: null}, {&quot;name&quot;: &quot;test_sign_in_with_in_valid_user&quot;, &quot;class_name&quot;: &quot;test_sign_in_page.TestSignInPage&quot;, &quot;status&quot;: &quot;ERROR&quot;, &quot;start&quot;: 1755687194.4166589, &quot;stop&quot;: 1755687260.5999238, &quot;duration_ms&quot;: 66183, &quot;message&quot;: &quot;Message: \nStacktrace:\n0   chromedriver                        0x00000001050fcc20 cxxbridge1$str$ptr + 2747652\n1   chromedriver                        0x00000001050f4b20 cxxbridge1$str$ptr + 2714628\n2   chromedriver                        0x0000000104c3d0c8 cxxbridge1$string$len + 90536\n3   chromedriver                        0x0000000104c84618 cxxbridge1$string$len + 382712\n4   chromedriver                        0x0000000104cc599c cxxbridge1$string$len + 649852\n5   chromedriver                        0x0000000104c78934 cxxbridge1$string$len + 334356\n6   chromedriver                        0x00000001050bf88c cxxbridge1$str$ptr + 2496880\n7   chromedriver                        0x00000001050c2ab8 cxxbridge1$str$ptr + 2509724\n8   chromedriver                        0x00000001050a0510 cxxbridge1$str$ptr + 2369012\n9   chromedriver                        0x00000001050c3360 cxxbridge1$str$ptr + 2511940\n10  chromedriver                        0x0000000105091610 cxxbridge1$str$ptr + 2307828\n11  chromedriver                        0x00000001050e3230 cxxbridge1$str$ptr + 2642708\n12  chromedriver                        0x00000001050e33bc cxxbridge1$str$ptr + 2643104\n13  chromedriver                        0x00000001050f476c cxxbridge1$str$ptr + 2713680\n14  libsystem_pthread.dylib             0x00000001819bfc0c _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001819bab80 thread_start + 8\n&quot;, &quot;traceback&quot;: &quot;Traceback (most recent call last):\n  File \&quot;/Users/mesutgunes/.pyenv/versions/3.11.0rc2/lib/python3.11/unittest/case.py\&quot;, line 57, in testPartExecutor\n    yield\n  File \&quot;/Users/mesutgunes/.pyenv/versions/3.11.0rc2/lib/python3.11/unittest/case.py\&quot;, line 623, in run\n    self._callTestMethod(testMethod)\n  File \&quot;/Users/mesutgunes/.pyenv/versions/3.11.0rc2/lib/python3.11/unittest/case.py\&quot;, line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \&quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/tests/test_sign_in_page.py\&quot;, line 47, in test_sign_in_with_in_valid_user\n    result = login_page.login_with_in_valid_user(\&quot;invalid_user\&quot;)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \&quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/pages/login_page.py\&quot;, line 54, in login_with_in_valid_user\n    self.login(user)\n  File \&quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/pages/login_page.py\&quot;, line 45, in login\n    self.enter_email(user[\&quot;email\&quot;])\n  File \&quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/pages/login_page.py\&quot;, line 13, in enter_email\n    field = self.wait_and_find(*self.locator.EMAIL)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \&quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/pages/base_page.py\&quot;, line 20, in wait_and_find\n    WebDriverWait(self.driver, to).until(EC.presence_of_element_located(locator))\n  File \&quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/.venv/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\&quot;, line 138, in until\n    raise TimeoutException(message, screen, stacktrace)\nselenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n0   chromedriver                        0x00000001050fcc20 cxxbridge1$str$ptr + 2747652\n1   chromedriver                        0x00000001050f4b20 cxxbridge1$str$ptr + 2714628\n2   chromedriver                        0x0000000104c3d0c8 cxxbridge1$string$len + 90536\n3   chromedriver                        0x0000000104c84618 cxxbridge1$string$len + 382712\n4   chromedriver                        0x0000000104cc599c cxxbridge1$string$len + 649852\n5   chromedriver                        0x0000000104c78934 cxxbridge1$string$len + 334356\n6   chromedriver                        0x00000001050bf88c cxxbridge1$str$ptr + 2496880\n7   chromedriver                        0x00000001050c2ab8 cxxbridge1$str$ptr + 2509724\n8   chromedriver                        0x00000001050a0510 cxxbridge1$str$ptr + 2369012\n9   chromedriver                        0x00000001050c3360 cxxbridge1$str$ptr + 2511940\n10  chromedriver                        0x0000000105091610 cxxbridge1$str$ptr + 2307828\n11  chromedriver                        0x00000001050e3230 cxxbridge1$str$ptr + 2642708\n12  chromedriver                        0x00000001050e33bc cxxbridge1$str$ptr + 2643104\n13  chromedriver                        0x00000001050f476c cxxbridge1$str$ptr + 2713680\n14  libsystem_pthread.dylib             0x00000001819bfc0c _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001819bab80 thread_start + 8\n\n&quot;}, {&quot;name&quot;: &quot;test_sign_in_with_valid_user&quot;, &quot;class_name&quot;: &quot;test_sign_in_page.TestSignInPage&quot;, &quot;status&quot;: &quot;ERROR&quot;, &quot;start&quot;: 1755687260.719886, &quot;stop&quot;: 1755687327.889175, &quot;duration_ms&quot;: 67169, &quot;message&quot;: &quot;Message: \nStacktrace:\n0   chromedriver                        0x0000000102d58c20 cxxbridge1$str$ptr + 2747652\n1   chromedriver                        0x0000000102d50b20 cxxbridge1$str$ptr + 2714628\n2   chromedriver                        0x00000001028990c8 cxxbridge1$string$len + 90536\n3   chromedriver                        0x00000001028e0618 cxxbridge1$string$len + 382712\n4   chromedriver                        0x000000010292199c cxxbridge1$string$len + 649852\n5   chromedriver                        0x00000001028d4934 cxxbridge1$string$len + 334356\n6   chromedriver                        0x0000000102d1b88c cxxbridge1$str$ptr + 2496880\n7   chromedriver                        0x0000000102d1eab8 cxxbridge1$str$ptr + 2509724\n8   chromedriver                        0x0000000102cfc510 cxxbridge1$str$ptr + 2369012\n9   chromedriver                        0x0000000102d1f360 cxxbridge1$str$ptr + 2511940\n10  chromedriver                        0x0000000102ced610 cxxbridge1$str$ptr + 2307828\n11  chromedriver                        0x0000000102d3f230 cxxbridge1$str$ptr + 2642708\n12  chromedriver                        0x0000000102d3f3bc cxxbridge1$str$ptr + 2643104\n13  chromedriver                        0x0000000102d5076c cxxbridge1$str$ptr + 2713680\n14  libsystem_pthread.dylib             0x00000001819bfc0c _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001819bab80 thread_start + 8\n&quot;, &quot;traceback&quot;: &quot;Traceback (most recent call last):\n  File \&quot;/Users/mesutgunes/.pyenv/versions/3.11.0rc2/lib/python3.11/unittest/case.py\&quot;, line 57, in testPartExecutor\n    yield\n  File \&quot;/Users/mesutgunes/.pyenv/versions/3.11.0rc2/lib/python3.11/unittest/case.py\&quot;, line 623, in run\n    self._callTestMethod(testMethod)\n  File \&quot;/Users/mesutgunes/.pyenv/versions/3.11.0rc2/lib/python3.11/unittest/case.py\&quot;, line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \&quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/tests/test_sign_in_page.py\&quot;, line 40, in test_sign_in_with_valid_user\n    result = login_page.login_with_valid_user(\&quot;valid_user\&quot;)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \&quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/pages/login_page.py\&quot;, line 50, in login_with_valid_user\n    self.login(user)\n  File \&quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/pages/login_page.py\&quot;, line 45, in login\n    self.enter_email(user[\&quot;email\&quot;])\n  File \&quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/pages/login_page.py\&quot;, line 13, in enter_email\n    field = self.wait_and_find(*self.locator.EMAIL)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \&quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/pages/base_page.py\&quot;, line 20, in wait_and_find\n    WebDriverWait(self.driver, to).until(EC.presence_of_element_located(locator))\n  File \&quot;/Users/mesutgunes/Projects/personal/page-object-python-selenium/.venv/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\&quot;, line 138, in until\n    raise TimeoutException(message, screen, stacktrace)\nselenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n0   chromedriver                        0x0000000102d58c20 cxxbridge1$str$ptr + 2747652\n1   chromedriver                        0x0000000102d50b20 cxxbridge1$str$ptr + 2714628\n2   chromedriver                        0x00000001028990c8 cxxbridge1$string$len + 90536\n3   chromedriver                        0x00000001028e0618 cxxbridge1$string$len + 382712\n4   chromedriver                        0x000000010292199c cxxbridge1$string$len + 649852\n5   chromedriver                        0x00000001028d4934 cxxbridge1$string$len + 334356\n6   chromedriver                        0x0000000102d1b88c cxxbridge1$str$ptr + 2496880\n7   chromedriver                        0x0000000102d1eab8 cxxbridge1$str$ptr + 2509724\n8   chromedriver                        0x0000000102cfc510 cxxbridge1$str$ptr + 2369012\n9   chromedriver                        0x0000000102d1f360 cxxbridge1$str$ptr + 2511940\n10  chromedriver                        0x0000000102ced610 cxxbridge1$str$ptr + 2307828\n11  chromedriver                        0x0000000102d3f230 cxxbridge1$str$ptr + 2642708\n12  chromedriver                        0x0000000102d3f3bc cxxbridge1$str$ptr + 2643104\n13  chromedriver                        0x0000000102d5076c cxxbridge1$str$ptr + 2713680\n14  libsystem_pthread.dylib             0x00000001819bfc0c _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001819bab80 thread_start + 8\n\n&quot;}, {&quot;name&quot;: &quot;test_sign_up_button&quot;, &quot;class_name&quot;: &quot;test_sign_in_page.TestSignInPage&quot;, &quot;status&quot;: &quot;PASS&quot;, &quot;start&quot;: 1755687328.002583, &quot;stop&quot;: 1755687364.248458, &quot;duration_ms&quot;: 36245, &quot;message&quot;: null, &quot;traceback&quot;: null}]</pre>
+</main>
+<footer style='padding:1rem 2rem;font-size:.65rem;color:#777'>Generated 2025-08-20 10:56:04 UTC</footer>
+</body></html>

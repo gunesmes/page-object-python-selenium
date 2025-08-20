@@ -102,6 +102,12 @@ Run all tests:
 python -m unittest
 ```
 
+Generate an HTML report (after installing requirements):
+```bash
+python run_tests.py
+```
+The report will be created under `reports/` (timestamped). Open the generated `selenium_tests*.html` file in a browser.
+
 Run a single test class:
 ```bash
 python -m unittest tests.test_sign_in_page.TestSignInPage
