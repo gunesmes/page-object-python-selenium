@@ -1,4 +1,5 @@
 selenium==4.35.0
 webdriver-manager==4.0.2
+guara==0.0.23
 # Only direct dependencies required for running unittest-based Selenium tests.
 # unittest is in the Python standard library; no need to list it here.
