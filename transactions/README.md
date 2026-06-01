@@ -1,5 +1,5 @@
 # Selenium Page Transactions Boilerplate (with Guará)
-This repository demonstrates an advanced automation architecture that evolves the traditional **Page Object Model (POM)** into **Page Transactions** using the [Guará](https://github.com) framework.
+This repository demonstrates an advanced automation architecture that evolves the traditional **Page Object Model (POM)** into **Page Transactions** using the [Guará](https://github.com/douglasdcm/guara) framework.
 
 By adding a semantic transaction layer over standard Page Objects, tests become highly readable, decoupled from UI details, and focused entirely on the user's business journey.
 ## 🚀 Key Benefits
